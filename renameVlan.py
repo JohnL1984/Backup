@@ -13,11 +13,10 @@ class rename (threading.Thread):
         host = switch[1]
         switchName = switch[0]
         device = ConnectHandler(device_type=platform, ip=host, username=username, password=password)
-        if switch[3] == "DC":
-            for vlanId, vlanName in vlans.items():
-                print('Renaming VLAN %s, name %s, on %s: '%(vlanId, vlanName, switchName))
-                config_commands = ['vlan ' + str(vlanId), 'name ' + str(vlanName)]
-                output = device.send_config_set(config_commands)
+        for vlanId, vlanName in vlans.items():
+            print('Renaming VLAN %s, name %s, on %s: '%(vlanId, vlanName, switchName))
+            config_commands = ['vlan ' + str(vlanId), 'name ' + str(vlanName)]
+            output = device.send_config_set(config_commands)
         
         config_commands = ['copy run start']
         print("VLAN/s successfully renamed - Saving config on %s"%(switchName))
