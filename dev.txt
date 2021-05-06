@@ -1,0 +1,6 @@
+DEV-room1-101,192.168.17.243,cisco_nxos,DC
+DEV-room1-102,192.168.17.245,cisco_nxos,DC
+DEV-room1-103,192.168.17.246,cisco_nxos,DC
+DEV-room2-101,192.168.17.244,cisco_nxos,DC
+DEV-room2-102,192.168.17.247,cisco_nxos,DC
+DEV-room2-103,192.168.17.248,cisco_nxos,DC
